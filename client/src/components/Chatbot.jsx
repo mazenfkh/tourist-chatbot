@@ -288,8 +288,8 @@ function Chatbot() {
   }, [showLanguageDropdown]);
 
   return (
-    <div className="w-full max-w-xl mx-auto rounded-2xl shadow-xl bg-gradient-to-b from-indigo-50 to-white overflow-hidden flex flex-col h-screen sm:h-[600px] border border-indigo-100">
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 sm:px-6 py-5 flex justify-between items-center">
+    <div className="w-full sm:max-w-xl mx-auto rounded-2xl shadow-xl bg-gradient-to-b from-indigo-50 to-white overflow-hidden flex flex-col h-screen sm:h-[600px] border border-indigo-100">
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-2 sm:px-6 py-4 sm:py-5 flex justify-between items-center">
         <div className="flex items-center space-x-3">
           <div className="bg-white bg-opacity-20 p-2 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -305,7 +305,7 @@ function Chatbot() {
         <div className="relative language-selector">
           <button 
             onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
-            className="px-4 py-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white text-sm transition-colors duration-200 flex items-center space-x-2 backdrop-blur-sm"
+            className="px-3 sm:px-4 py-2 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 text-white text-sm transition-colors duration-200 flex items-center space-x-2 backdrop-blur-sm"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
@@ -317,7 +317,7 @@ function Chatbot() {
           </button>
           
           {showLanguageDropdown && (
-            <div className="absolute right-0 mt-2 w-40 sm:w-56 bg-white rounded-xl shadow-lg z-10 overflow-hidden animate-fadeIn ring-1 ring-black ring-opacity-5 border border-indigo-100">
+            <div className="absolute right-0 mt-2 w-full sm:w-56 bg-white rounded-xl shadow-lg z-10 overflow-hidden animate-fadeIn ring-1 ring-black ring-opacity-5 border border-indigo-100">
               <div className="p-3 border-b border-indigo-50">
                 <div className="relative">
                   <input
@@ -365,7 +365,7 @@ function Chatbot() {
       </div>
 
       <div 
-        className="flex-1 overflow-y-auto p-4 sm:p-6 bg-gradient-to-b from-indigo-50/50 to-white flex flex-col gap-4"
+        className="flex-1 overflow-y-auto p-3 sm:p-6 bg-gradient-to-b from-indigo-50/50 to-white flex flex-col gap-4"
         style={{
           backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E\")",
         }}
@@ -376,7 +376,7 @@ function Chatbot() {
             className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'} animate-fadeSlideUp`}
           >
             {msg.sender === 'user' ? (
-              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-sm px-5 py-3.5 rounded-2xl max-w-[85%]">
+              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-sm px-5 py-3.5 rounded-2xl max-w-[95%] sm:max-w-[85%]">
                 <div className="text-sm whitespace-pre-line leading-relaxed">
                   {msg.text}
                 </div>
@@ -385,7 +385,7 @@ function Chatbot() {
               msg.text.includes("I'm a tourist assistant and can only answer questions related to travel") ? (
                 renderStyledTravelOnlyResponse()
               ) : (
-                <div className="bg-white text-gray-700 border border-indigo-100 shadow-md px-5 py-3.5 rounded-2xl max-w-[85%]">
+                <div className="bg-white text-gray-700 border border-indigo-100 shadow-md px-5 py-3.5 rounded-2xl max-w-[95%] sm:max-w-[85%]">
                   <div className="text-sm whitespace-pre-line leading-relaxed">
                     {msg.text.includes('**') || msg.text.includes('1.') || msg.text.includes('2.') || msg.text.includes('3.') 
                       ? formatMessageWithMarkdown(msg.text) 
@@ -412,7 +412,7 @@ function Chatbot() {
         <div ref={messagesEndRef} />
       </div>
 
-      <div className="p-4 border-t border-indigo-100 bg-white">
+      <div className="p-3 sm:p-4 border-t border-indigo-100 bg-white">
         <div className="flex overflow-hidden rounded-full shadow-sm border border-indigo-200 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:border-indigo-500 bg-indigo-50/50">
           <input
             ref={inputRef}
